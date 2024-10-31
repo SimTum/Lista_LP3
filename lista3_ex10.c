@@ -14,12 +14,15 @@ int main(int argc, char *argv[])
     int fakematrix[16];
     for (int i = 0; i < 16; i++)
     {
+        if (i%4 == 0) printf("\n");
         scanf("%d ", &fakematrix[i]);
         printf("%d ", fakematrix[i]);
     }
     qsort(fakematrix, sizeof(fakematrix) / sizeof(*fakematrix), sizeof(*fakematrix), comp);
+    printf("\n\nSorted matrix:\n");
     for (int i = 0; i < 16; i++)
     {
+        if (i%4 == 0) printf("\n");
         printf("%d ", fakematrix[i]);
     }
 }
